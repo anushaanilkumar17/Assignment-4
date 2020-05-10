@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question No 3</title>
+</head>
+<body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;">
+
+    <div>
+
+        <h5> Q.3  Write a JavaScript program which accept a string as input and swap the case of each character.</h5>
+        <input type="text" id="swapchr" placeholder="Enter the elements (eg: tHE qUICK bROWN..)" style="width: 25%;"></input><br><br>
+        <button onclick="swap();">View Output</button>  
+        <br><br>        
+        <span id="ans3" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></span>
+    
+       
+    </div>
+    
+
+<!-- JS Function Starts Here -->
+
+    <script>
+function swap(){
+    let swp= document.getElementById("swapchr").value ;//fetching the array
+    
+    if(document.getElementById("swapchr").value==""){
+        document.getElementById("ans3").innerHTML="ans3";
+        return false;
+    }
+    let tempValue="";
+    for(let i=0;i<swp.length;i++){
+        if(/^[A-Z]/.test(swp[i])){
+        tempValue+=swp[i].toLowerCase();       
+        }
+        else{
+        tempValue+=swp[i].toUpperCase();  
+        }
+    }
+    document.getElementById("ans3").innerHTML=tempValue;
+
+}
+
+    </script>
+</body>
+</html>
+  

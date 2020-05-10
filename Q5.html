@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question 5</title>
+</head>
+
+<body  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;"></body>
+    
+<div>
+
+    <h5>Q.5 Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, check if the current number is odd or even, and display the message to the screen as odd or even.</h5> 
+    <button onclick="oddEven()">View Output</button><br>
+    <span id="ans5" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></span>
+
+</div>
+
+    <!-- JS Function Starts Here -->
+
+<script>
+
+let oddoreven= document.getElementById("ans5");
+
+
+function oddEven(){
+   
+    var odd_even="<br>";
+    for(i=0; i<=15; i++){
+        if(i%2==0){
+            odd_even+=i+" : Even number"+"<br>";
+            document.getElementById("ans5").innerHTML=odd_even;
+        }else{
+            odd_even+=i+" : Odd number"+"<br>";            
+            document.getElementById("ans5").innerHTML=odd_even;         
+
+        }
+    }
+}
+
+</script>
+</body>
+</html>

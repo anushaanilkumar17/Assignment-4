@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASSIGNMENT-4</title>
+
+</head>
+
+<div style="font-size: x-large; font-family: 'Times New Roman', Times, serif; color: seagreen; text-align: center;">
+    <h3>CLASS EXERCISES ON JAVASCRIPT</h3>
+</div>
+    <h5>Q.1 Write a JavaScript function to get an array and to read the first element of an array. Check whether it is prime or not.</h5>
+    <input type="text" id="primeNum" placeholder="Enter the elements (eg: 1, 2, 3, 4)" style="width:18%;"></input><br><br>
+    <button onclick="prime_Number();">View Output</button> <br><br>
+    <span id="ans1" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></span>
+
+<div>
+    
+
+<!-- JS Function Starts Here -->
+
+<script>
+
+function prime_Number(){
+    let primenumber ="[ "+ document.getElementById("primeNum").value + " ]";
+
+    let num= JSON.parse(primenumber);
+   
+    let firstN= num[0];
+
+        if(document.getElementById("primeNum").value==""){
+            document.getElementById("ans1").innerHTML="Field cannot be empty";
+            return false;
+        }
+        if(firstN===2){
+            document.getElementById("ans1").innerHTML=" ["+num+"] First number is prime number.";
+            return true;
+        }  
+        if (!Number.isInteger(firstN)||firstN<2||!(firstN%2)) {
+            document.getElementById("ans1").innerHTML=" ["+num+"] First number is not a prime number.";
+            return false;
+        }
+        
+        for( i=3; i< firstN; i++){ 
+        if (firstN%i===0){
+        document.getElementById("ans1").innerHTML=" ["+num+"] First number is not a prime number.";
+        
+        return false;
+        } 
+        else{
+            document.getElementById("ans1").innerHTML="  ["+num+"] First number is prime.";
+            return true;
+        }
+        }  
+        
+}
+
+</script>
+</body>
+</html>

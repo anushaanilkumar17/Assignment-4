@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question 7</title>
+</head>
+<body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;">
+    <div>
+
+        <h5>Q.7 Write a JavaScript program that accept two integers and display the larger using findLarge() function.</h5>
+           <input type="number" placeholder="Enter a Number " id="first_num"></input><br><br>
+           <input type="number" placeholder="Enter a Number " id="sec_num"></input><br><br>
+           <button class="button" onclick="find_larger()">View Output</button><br><br>
+           <span id="largeNum" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></span>
+       
+    </div>
+
+
+<!-- JS Function Starts Here -->
+
+<script>
+
+function find_larger()
+
+{
+   let num1 = document.getElementById("first_num").value;
+   let num2 = document.getElementById("sec_num").value;
+
+    if(num1>num2)
+    {
+        document.getElementById('largeNum').innerHTML= " "+num1+" is the largest number";
+        // window.alert("Largest Number is  " +num1);
+    }
+    else if(num2>num1)
+    {
+        document.getElementById('largeNum').innerHTML= " "+num2+" is the largest number";
+        // window.alert("Largest Number is  " +num2);
+    }
+    else if(num2>num1 && num2>num1)
+    {
+        document.getElementById('largeNum').innerHTML= " "+num2+" is largest number";
+        // window.alert("Largest Number is  " +num2);
+    }
+    
+}
+</script>
+</body>
+</html>

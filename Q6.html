@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question 6</title>
+</head>
+
+<body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;">
+   
+    <div>
+
+        <h5> Q.6 Write a JavaScript function to truncate a string if it is longer than the specified number of characters.</h5> 
+        <input type="text" id="strTrun" placeholder="Enter a string"><br><br>
+        <button onclick="truncate();">View Output</button><br><br>
+        <span id="ans6" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></span>
+       
+    </div>
+
+</body>
+
+<!-- JS Function Starts Here -->
+
+<script>
+
+function truncate(){
+    let stringTruncate=document.getElementById("strTrun").value ;
+    
+    if(document.getElementById("strTrun").value==""){
+        document.getElementById("ans6").innerHTML="Field cannot be empty";
+        return false;
+    }
+    let modified= stringTruncate.substr(0,15);    
+    document.getElementById("ans6").innerHTML=modified + ".."; 
+        
+}
+
+</script>
+
+</html>

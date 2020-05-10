@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question 2</title>
+</head>
+<body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;">
+        
+    <div>
+
+        <h5> Q.2 Write a JavaScript program to find the most frequent item of an array.</h5> 
+        <button onclick="frequentitem()">View Output</button><br><br>        
+        <span id="fitem" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></div>
+     
+    </div>
+<!-- JS Function Starts Here -->
+
+<script>
+function frequentitem(){
+    let array=[10,20,10,30,20,30,10,30,10,40,10,20,10];
+    let mf = 1;
+    let m = 0;
+    let item;
+    for (let i=0; i<array.length; i++)
+    {
+            for (let j=i; j<array.length; j++)
+            {
+                if (array[i] == array[j])
+                m++;
+                if (mf<m)
+                {
+                mf=m; 
+                item = array[i];
+                }
+            }
+            m=0;
+    }
+    let output2=(item + " ( " + mf + " times ) ");
+    document.getElementById('fitem').innerHTML=output2;
+}
+    
+</script>
+</body>
+</html>

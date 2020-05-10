@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10</title>
+</head>
+
+<body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;">
+     
+    <div>
+
+        <body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;">
+         
+          <h5> Q.10 Write a JavaScript program to construct the following pattern, using a nested for loop.</h5> 
+          <button id="*patterns" onclick="pattern();">View Output</button> <br><br> 
+        <span id="ans10" onclick="reset()" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></span>
+       
+    </div>
+ 
+<!-- JS Function Starts Here  -->
+
+ <script>
+        let button=document.getElementById("*patterns");
+        button.addEventListener("click",trianglePattern);
+
+        function trianglePattern(){
+        button.style.visibility="visible";
+        let pattern="";
+        
+        for(let i=0; i<=7; i++){
+            for(j=1; j<=i; j++){
+                pattern+="*";
+            }
+            pattern+="<br>";
+        }
+        document.getElementById("ans10").innerHTML=pattern;
+        }
+        function reset(){
+        document.getElementById("ans10").innerHTML="";
+        button.style.visibility="visible";
+
+        }
+       
+ </script>
+</body>
+
+</html>

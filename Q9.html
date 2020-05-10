@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question 9</title>
+</head>
+
+<body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color:black;">
+    
+    <div>
+        <h5> Q.9 Write a JavaScript program to print the letters of the word “Javascript” as below in each line using for…of.</h5> 
+        <button id="Jpatterns" onclick="triangular();">View Output</button> <br><br> 
+        <span id="ans9" onclick="reset()" style="font-family: monospace; color: rgb(255, 61, 61); font-size: medium;"></span>
+       
+    </div>
+    
+<!-- JS Function Starts Here  -->
+
+<script>
+
+let button=document.getElementById("Jpatterns");
+button.addEventListener("click",triangular);
+
+
+function triangular(){
+    
+    button.style.visibility="visible";
+    let pattern="";
+    let myString='Javascript';
+    let y='<br>';
+   
+
+    for (let char of myString){        
+           y+=char;
+           pattern+=y;        
+           document.getElementById("ans9").innerHTML= pattern;               
+
+        }    
+    }
+
+</script>
+
+</body>
+</html>
